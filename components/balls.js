@@ -144,6 +144,9 @@ function Balls(props) {
       onMouseDown={handleDown}
       onMouseUp={handleUp}
       onMouseMove={handleAddCircle}
+      onTouchStart={handleDown}
+      onTouchEnd={handleUp}
+      onTouchMove={handleAddCircle}
     >
       <div ref={scene} style={{ width: '100%', height: '100%' }} />
     </div>
