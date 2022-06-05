@@ -17,6 +17,34 @@ html {
   overflow: hidden;
 }
 
+header {
+  grid-area: 1/1;
+  display: grid;
+  z-index: 1;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-size: min(15vw, 177.24px);
+  animation-name: spin;
+  animation-duration: 2500ms;
+  /* animation-iteration-count: infinite; */
+  animation-timing-function: ease-in-out;
+  animation-direction: reverse;
+  /* animation-delay: 1s; */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(10000);
+  }
+}
+
 .fill {
   grid-area: 1/1;
   z-index: 0;

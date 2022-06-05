@@ -8,7 +8,7 @@ const index = (props) => {
     <article className='outer-cont'>
       <section className='inner-cont'>
         <header>
-          <h1>world cup hair website</h1>
+          <h1>world cup hair</h1>
         </header>
         <div className='fill'>
           <Image src={imgsrc} />
