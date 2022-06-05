@@ -8,9 +8,10 @@ export default function Button({ children }) {
         padding: '0.5em 1em',
         cursor: 'pointer',
         fontSize: '1.1em',
+        width: '100%'
       }}
     >
       {children}
     </button>
-  )
+  );
 }
