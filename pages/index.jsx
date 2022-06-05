@@ -1,20 +1,12 @@
 import Button from '../components/button.js';
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import imgsrc from '../public/images/nestor pintana ref.jpg';
 
+import Balls from '../components/balls.js';
+
 const index = (props) => {
   const ref = useRef(null);
-  useEffect(() => {
-    ref.current.addEventListener('transitionend', (e) => {
-      console.log('Transition ended');
-      const confettiSettings = { target: e.target };
-      const confetti = new ConfettiGenerator(confettiSettings);
-      confetti.render();
-    });
-
-    return () => confetti.clear();
-  }, []); // add the var dependencies or not
   return (
     <article className='outer-cont'>
       <section className='inner-cont'>
@@ -24,6 +16,7 @@ const index = (props) => {
         <div className='fill'>
           <Image src={imgsrc} />
         </div>
+        <Balls />
       </section>
     </article>
   );

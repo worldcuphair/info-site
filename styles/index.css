@@ -21,27 +21,39 @@ header {
   grid-area: 1/1;
   display: grid;
   z-index: 1;
-  place-content: center;
+  place-items: center;
   width: 100%;
   height: 100%;
+  position: absolute;
+}
+
+.ball {
+  grid-area: 1/1;
+  z-index: 2;
+}
+
+header canvas {
+  grid-area: 1/1;
+  place-content: center;
+  transform: rotate(180deg);
 }
 
 h1 {
+  grid-area: 1/1;
   font-size: min(15vw, 177.24px);
   animation-name: spin;
   animation-duration: 2500ms;
   /* animation-iteration-count: infinite; */
   animation-timing-function: ease-in-out;
-  animation-direction: reverse;
   /* animation-delay: 1s; */
 }
 
 @keyframes spin {
   from {
-    transform: rotate(0deg) scale(1);
+    transform: scale(10000);
   }
   to {
-    transform: rotate(360deg) scale(10000);
+    transform: scale(1);
   }
 }
 
