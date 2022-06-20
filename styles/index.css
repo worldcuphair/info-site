@@ -53,7 +53,7 @@ header canvas {
 h1 {
   grid-area: 1/1;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: -0.15rem;
   text-transform: uppercase;
   color: #c2de4d;
