@@ -18,7 +18,7 @@ const index = (props) => {
             <div className='left-area'></div>
             <div className='center-area'>
               <iframe
-                src='https://clips.twitch.tv/embed?clip=ElatedCrypticTermiteBuddhaBar-WUNc9zjdlQJx88P1&parent=www.example.com'
+                src='https://clips.twitch.tv/embed?clip=ElatedCrypticTermiteBuddhaBar-WUNc9zjdlQJx88P1&parent=worldcup.hair'
                 frameBorder='0'
                 allowFullScreen='true'
                 scrolling='no'
