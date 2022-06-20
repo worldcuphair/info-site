@@ -1,11 +1,7 @@
-import Button from '../components/button.js';
 import React, { useRef } from 'react';
-import Image from 'next/image';
-import imgsrc from '../public/images/nestor pintana ref.jpg';
-
 import Canvas from '../components/Canvas.js';
 
-const index = (props) => {
+const index = ({}) => {
   const ref = useRef(null);
   return (
     <article className='outer-cont'>

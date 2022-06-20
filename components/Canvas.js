@@ -41,11 +41,6 @@ function Canvas() {
       }
     });
 
-    console.log(
-      Math.floor(window.innerWidth / 70),
-      Number(Math.floor(window.innerHeight / 140))
-    );
-
     const stack = Composites.stack(
       10,
       10,
@@ -176,9 +171,6 @@ function Canvas() {
       const wallBottom = scene.engine.world.bodies[0];
       const wallLeft = scene.engine.world.bodies[2];
       const wallRight = scene.engine.world.bodies[1];
-
-      console.log(scene.engine.world.bodies);
-      console.log(width, height);
 
       Body.setPosition(wallBottom, {
         x: width / 2,
