@@ -8,10 +8,12 @@ import {
   World,
   Composites,
   Composite,
+  Common,
   Mouse,
   MouseConstraint
 } from 'matter-js';
 import ballSrc from '../public/images/2022 world cup ball.png';
+import hairSrc from '../public/images/Emo-Punk-Spikes.png';
 
 const STATIC_DENSITY = 1;
 
@@ -52,8 +54,20 @@ function Canvas() {
       5,
       5,
       (x, y) => {
-        console.log(x, y);
-        return Bodies.circle(x, y, 70, {
+        const newY =
+          y +
+          Common.random(
+            -Math.floor(window.innerHeight / 1000),
+            -Math.floor(window.innerHeight / 2)
+          );
+        const ball = Bodies.circle(x, newY, 70, {
+          restitution: 0.6,
+          friction: 0.1,
+          density: 0.04,
+          friction: 0.01,
+          frictionAir: 0.00001,
+          restitution: 0.8,
+          isStatic: true,
           render: {
             sprite: {
               texture: ballSrc.src,
@@ -62,6 +76,21 @@ function Canvas() {
             }
           }
         });
+        const hair = Bodies.circle(x + 10, newY - 60, 70, {
+          restitution: 0.6,
+          friction: 0.1,
+          render: {
+            sprite: {
+              texture: hairSrc.src,
+              xScale: 0.4,
+              yScale: 0.4
+            }
+          }
+        });
+        const compoundBody = Body.create({
+          parts: [ball, hair]
+        });
+        return compoundBody;
       }
     );
 

@@ -57,21 +57,6 @@ h1 {
   letter-spacing: -0.1rem;
   text-transform: uppercase;
   color: #c2de4d;
-  /* animation-name: spin;
-  animation-duration: 2500ms; */
-
-  /* animation-iteration-count: infinite; */
-  /* animation-timing-function: ease-in-out; */
-  /* animation-delay: 1s; */
-}
-
-@keyframes spin {
-  from {
-    transform: scale(10);
-  }
-  to {
-    transform: scale(1);
-  }
 }
 
 .fill {
@@ -91,31 +76,27 @@ h1 {
 .grid-container {
   display: grid;
   grid-area: 1/1;
-  z-index: 4;
 }
 
 .twitch-area {
-  display: block;
+  display: grid;
   grid-template-columns: 2fr;
-  height: calc(50vh - 70px);
   margin-top: 70px;
 }
 
 .center-area {
   aspect-ratio: 16/9;
-  border: 4px solid #b80c1d;
+  border: 20px solid hsla(354, 88%, 38%, 0.538);
+  z-index: 5;
+  border-radius: 12px;
 }
 
 .left-area {
   display: none;
-  border-top: 4px solid #b80c1d;
-  border-bottom: 4px solid #b80c1d;
 }
 
 .right-area {
   display: none;
-  border-top: 4px solid #b80c1d;
-  border-bottom: 4px solid #b80c1d;
 }
 
 .center-area iframe {
@@ -130,17 +111,22 @@ h1 {
     grid-template-columns: 1fr 2fr 1fr;
     height: calc(50vh - 70px);
     margin-top: 70px;
+    gap: 2rem;
   }
 
   .left-area {
     display: grid;
-    border-top: 4px solid #b80c1d;
-    border-bottom: 4px solid #b80c1d;
+    background-color: hsla(354, 88%, 38%, 0.538);
+    border-radius: 12px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   .right-area {
     display: grid;
-    border-top: 4px solid #b80c1d;
-    border-bottom: 4px solid #b80c1d;
+    background-color: hsla(354, 88%, 38%, 0.538);
+    border-radius: 12px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
