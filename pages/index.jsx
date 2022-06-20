@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import imgsrc from '../public/images/nestor pintana ref.jpg';
 
-import Balls from '../components/balls.js';
+import Canvas from '../components/Canvas.js';
 
 const index = (props) => {
   const ref = useRef(null);
@@ -13,10 +13,21 @@ const index = (props) => {
         <header ref={ref}>
           <h1>world cup hair</h1>
         </header>
-        <div className='fill'>
-          <Image src={imgsrc} />
+        <div className='grid-container'>
+          <div className='twitch-area'>
+            <div className='left-area'></div>
+            <div className='center-area'>
+              <iframe
+                src='https://clips.twitch.tv/embed?clip=ElatedCrypticTermiteBuddhaBar-WUNc9zjdlQJx88P1&parent=www.example.com'
+                frameBorder='0'
+                allowFullScreen='true'
+                scrolling='no'
+              ></iframe>
+            </div>
+            <div className='right-area'></div>
+          </div>
         </div>
-        <Balls />
+        <Canvas />
       </section>
     </article>
   );
